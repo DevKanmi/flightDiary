@@ -9,3 +9,5 @@ export interface DiaryEntry {
     visibility: Visibility;
     comment?: string;
   }
+
+export type NonSensitiveDiaryEntry = Omit<DiaryEntry, 'comment'>; //Full type is defined here so we can shorten it in service file
